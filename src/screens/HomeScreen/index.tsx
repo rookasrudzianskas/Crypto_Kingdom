@@ -16,7 +16,13 @@ const HomeScreen = (props) => {
                 <View style={tw`flex items-center justify-center`}>
                     <Text style={tw` text-3xl font-bold mt-24 text-gray-200 text-center`}>Invest your virtual <Text style={tw`text-green-500 font-extrabold`}>$100,000</Text> and compete with others! 🔥</Text>
                 </View>
+
+                <View style={tw`px-16 py-5 bg-white  border-4 border-blue-500 rounded-xl  mt-10`}>
+                    <Text style={tw`text-gray-700 text-lg font-bold`}>Take me there!</Text>
+                </View>
             </View>
+
+
         </View>
     );
 };

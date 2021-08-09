@@ -22,12 +22,12 @@ export default function BottomTabNavigator() {
       initialRouteName="Home"
       screenOptions={{
       }}
-      tabBarOptions={{ activeTintColor: 'white', activeBackgroundColor: '#1D4ED8' }}>
+      tabBarOptions={{ activeTintColor: '#274156', activeBackgroundColor: '#fbfcff', inactiveBackgroundColor: '#fbfcff' }}>
           <BottomTab.Screen
             name="Home"
             component={HomeScreen}
             options={{
-              tabBarIcon: ({ color }) => <Entypo name="home" size={30} color={"white"} />,
+              tabBarIcon: ({ color }) => <Entypo name="home" size={30} color={color} />,
             }}
 
           />
@@ -36,7 +36,7 @@ export default function BottomTabNavigator() {
             name="Portfolio"
             component={PortfolioScreen}
             options={{
-              tabBarIcon: ({ color }) => <AntDesign name="piechart" size={30} color={"white"} />,
+              tabBarIcon: ({ color }) => <AntDesign name="piechart" size={30} color={color} />,
             }}
           />
 
@@ -44,7 +44,7 @@ export default function BottomTabNavigator() {
             name="Market"
             component={MarketScreen}
             options={{
-                tabBarIcon: ({ color }) => <FontAwesome5 name="chart-line" size={30} color={"white"} />,
+                tabBarIcon: ({ color }) => <FontAwesome5 name="chart-line" size={30} color={color} />,
             }}
         />
 
@@ -52,7 +52,7 @@ export default function BottomTabNavigator() {
             name="Rankings"
             component={RankingsScreen}
             options={{
-                tabBarIcon: ({ color }) => <MaterialIcons name="leaderboard" size={30} color={"white"} />,
+                tabBarIcon: ({ color }) => <MaterialIcons name="leaderboard" size={30} color={color} />,
             }}
         />
 
@@ -60,7 +60,7 @@ export default function BottomTabNavigator() {
             name="Profile"
             component={ProfileScreen}
             options={{
-                tabBarIcon: ({ color }) => <FontAwesome name="user" size={30} color={"white"} />,
+                tabBarIcon: ({ color }) => <FontAwesome name="user" size={30} color={color} />,
             }}
         />
     </BottomTab.Navigator>
