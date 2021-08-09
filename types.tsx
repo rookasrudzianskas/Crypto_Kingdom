@@ -15,11 +15,3 @@ export type BottomTabParamList = {
   Profile: undefined;
   Rankings: undefined;
 };
-
-export type TabOneParamList = {
-  TabOneScreen: undefined;
-};
-
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
-};
