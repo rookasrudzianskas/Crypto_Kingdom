@@ -1,15 +1,14 @@
 import React from 'react';
 import {View, Text} from "react-native";
-import tw from 'tailwind-react-native-classnames';
-
+import tw from "tailwind-react-native-classnames";
 
 // @ts-ignore
-const HomeScreen = (props) => {
+const PortfolioScreen = (props) => {
     return (
         <View style={tw`flex: 1, justify-center, items-center`}>
-            <Text>HomeScreen</Text>
+            <Text>PortfolioScreen</Text>
         </View>
     );
 };
 
-export default HomeScreen;
+export default PortfolioScreen;
