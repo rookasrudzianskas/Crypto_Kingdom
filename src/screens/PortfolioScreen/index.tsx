@@ -1,12 +1,24 @@
 import React from 'react';
-import {View, Text} from "react-native";
+import {View, Text, Image} from "react-native";
 import tw from "tailwind-react-native-classnames";
+// @ts-ignore
+import image from '../../../assets/images/Saly-10.png';
+import styles from "./styles";
+
 
 // @ts-ignore
 const PortfolioScreen = (props) => {
     return (
-        <View style={tw`flex-1 justify-center items-center`}>
-            <Text>PortfolioScreen</Text>
+        <View style={[styles.root, tw` items-center flex-1 bg-blue-700`]}>
+            {/*<View style={tw`items-center flex-1`}>*/}
+                <Image source={image} style={[styles.image, tw``]} />
+            {/*</View>*/}
+            <View style={tw`mt-12 items-start`}>
+                <Text style={tw`text-3xl text-gray-200 font-bold text-center`}>Portfolio balance</Text>
+                <View style={tw`mt-5`}>
+                    <Text style={tw`text-3xl text-white font-bold`}>$ <Text style={tw`text-4xl font-extrabold text-green-500 mt-5 text-center`}>64,423</Text></Text>
+                </View>
+            </View>
         </View>
     );
 };
