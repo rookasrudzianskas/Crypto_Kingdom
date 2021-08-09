@@ -24,9 +24,12 @@ export default function BottomTabNavigator() {
           <BottomTab.Screen
             name="Home"
             component={HomeScreen}
+            activeColor="#00aea2"
+            inactiveColor="#95a5a6"
             options={{
               tabBarIcon: ({ color }) => <Entypo name="home" size={30} color={color} />,
             }}
+
           />
 
           <BottomTab.Screen
