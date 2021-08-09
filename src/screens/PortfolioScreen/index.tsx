@@ -9,15 +9,15 @@ import styles from "./styles";
 // @ts-ignore
 const PortfolioScreen = (props) => {
     return (
-        <View style={[styles.root, tw` items-center flex-1 bg-blue-700`]}>
+        <View style={[styles.root, tw`bg-blue-700`]}>
             {/*<View style={tw`items-center flex-1`}>*/}
                 <Image source={image} style={[styles.image, tw``]} />
             {/*</View>*/}
-            <View style={tw`mt-12 items-start`}>
+            <View style={[tw`mt-12`]}>
                 <Text style={tw`text-3xl text-gray-200 font-bold text-center`}>Portfolio balance</Text>
-                <View style={tw`mt-5`}>
+                {/*<View style={tw`mt-5`}>*/}
                     <Text style={tw`text-3xl text-white font-bold`}>$ <Text style={tw`text-4xl font-extrabold text-green-500 mt-5 text-center`}>64,423</Text></Text>
-                </View>
+                {/*</View>*/}
             </View>
         </View>
     );
