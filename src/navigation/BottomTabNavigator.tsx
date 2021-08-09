@@ -10,6 +10,7 @@ import PortfolioScreen from "../screens/PortfolioScreen";
 import MarketScreen from "../screens/MarketScreen";
 import RankingsScreen from "../screens/RankingsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import {AntDesign, Entypo} from "@expo/vector-icons";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -24,7 +25,7 @@ export default function BottomTabNavigator() {
         name="Home"
         component={HomeScreen}
         options={{
-          // tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <Entypo name="home" size={30} color={color} />,
         }}
       />
 
@@ -32,7 +33,7 @@ export default function BottomTabNavigator() {
         name="Portfolio"
         component={PortfolioScreen}
         options={{
-          // tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="piechart" size={30} color={color} />,
         }}
       />
 
