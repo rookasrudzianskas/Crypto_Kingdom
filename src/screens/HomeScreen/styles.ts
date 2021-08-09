@@ -5,7 +5,8 @@ const styles = StyleSheet.create({
 
     },
     image: {
-
+        height: "50%",
+        aspectRatio: 1,
     }
 });
 

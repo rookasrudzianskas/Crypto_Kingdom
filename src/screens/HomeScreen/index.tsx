@@ -10,8 +10,11 @@ import image from '../../../assets/images/Saly-1.png';
 const HomeScreen = (props) => {
     return (
         <View style={styles.root}>
-            <Image source={image} style={styles.image} />
-            <Text style={tw` text-2xl font-bold`}>HomeScreen</Text>
+            <View style={tw`p-24 flex items-center justify-center`}>
+                <Image source={image} style={styles.image} />
+                <Text style={tw` text-3xl font-bold mt-10 text-gray-500`}>Welcome to Crypto Kingdom</Text>
+                <Text style={tw` text-2xl font-bold text-gray-700`}>Invest your virtual $100,000 and compete with others</Text>
+            </View>
         </View>
     );
 };
