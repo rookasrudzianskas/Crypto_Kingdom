@@ -21,21 +21,21 @@ export default function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="Home"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
-      <BottomTab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarIcon: ({ color }) => <Entypo name="home" size={30} color={color} />,
-        }}
-      />
+          <BottomTab.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              tabBarIcon: ({ color }) => <Entypo name="home" size={30} color={color} />,
+            }}
+          />
 
-      <BottomTab.Screen
-        name="Portfolio"
-        component={PortfolioScreen}
-        options={{
-          tabBarIcon: ({ color }) => <AntDesign name="piechart" size={30} color={color} />,
-        }}
-      />
+          <BottomTab.Screen
+            name="Portfolio"
+            component={PortfolioScreen}
+            options={{
+              tabBarIcon: ({ color }) => <AntDesign name="piechart" size={30} color={color} />,
+            }}
+          />
 
         <BottomTab.Screen
             name="Market"
