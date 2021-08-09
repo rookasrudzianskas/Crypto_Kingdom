@@ -4,10 +4,18 @@ import tw from 'tailwind-react-native-classnames';
 import styles from "./styles";
 // @ts-ignore
 import image from '../../../assets/images/Saly-1.png';
+import {useNavigation} from "@react-navigation/native";
 
 
 // @ts-ignore
 const HomeScreen = (props) => {
+
+    const navigation = useNavigation();
+
+    const goToPortfolioScreen = () => {
+        // navigation.push('Portfolio');
+    }
+
     return (
         <View style={tw`items-center flex-1 bg-blue-700`}>
             <View style={tw`p-24 flex items-center justify-center`}>
@@ -18,7 +26,8 @@ const HomeScreen = (props) => {
                 </View>
 
 
-                <TouchableOpacity activeOpacity={0.8} >
+    {/*// @ts-ignore*/}
+                <TouchableOpacity onClick={goToPortfolioScreen} activeOpacity={0.8} >
                     <View style={tw`px-16 py-5 bg-white  border-4 border-blue-500 rounded-xl  mt-10`}>
                         <Text style={tw`text-gray-700 text-lg font-bold`}>Take me there!</Text>
                     </View>
