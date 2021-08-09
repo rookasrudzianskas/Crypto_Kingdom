@@ -6,7 +6,7 @@ import tw from 'tailwind-react-native-classnames';
 // @ts-ignore
 const HomeScreen = (props) => {
     return (
-        <View style={tw`flex: 1, justify-center, items-center`}>
+        <View style={tw`flex: 1 justify-center items-center`}>
             <Text>HomeScreen</Text>
         </View>
     );
