@@ -11,21 +11,22 @@ import MarketScreen from "../screens/MarketScreen";
 import RankingsScreen from "../screens/RankingsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import {AntDesign, Entypo, FontAwesome, FontAwesome5, MaterialIcons} from "@expo/vector-icons";
+import tw from "tailwind-react-native-classnames";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
-  const colorScheme = useColorScheme();
 
     return (
     <BottomTab.Navigator
       initialRouteName="Home"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+      screenOptions={{
+          
+      }}
+      tabBarOptions={{ activeTintColor: 'blue', }}>
           <BottomTab.Screen
             name="Home"
             component={HomeScreen}
-            activeColor="#00aea2"
-            inactiveColor="#95a5a6"
             options={{
               tabBarIcon: ({ color }) => <Entypo name="home" size={30} color={color} />,
             }}
