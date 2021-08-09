@@ -13,7 +13,7 @@ export type BottomTabParamList = {
   Portfolio: undefined;
   Market: undefined;
   Profile: undefined;
-  Ranking: undefined;
+  Rankings: undefined;
 };
 
 export type TabOneParamList = {
