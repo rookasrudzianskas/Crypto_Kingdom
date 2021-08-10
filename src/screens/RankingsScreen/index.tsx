@@ -45,7 +45,7 @@ const RankingsScreen = (props) => {
             <>
                 <Image  source={image} style={[styles.image, tw``]}/>
                 <View style={[styles.balanceContainer, tw`mb-16 items-center`]}>
-                    <Text style={tw`text-3xl text-gray-200 font-bold`}>Rankings</Text>
+                    <Text style={tw`text-3xl text-gray-200 font-bold`}>Rankings 🔥</Text>
                 </View>
             </>
             {/*<View style={tw`bg-blu`}>*/}
