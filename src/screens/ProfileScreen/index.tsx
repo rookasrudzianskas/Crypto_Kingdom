@@ -24,16 +24,18 @@ const ProfileScreen = (props) => {
         <View style={[styles.root, tw`bg-blue-700`]}>
             <>
                 <Image  source={image} style={[styles.image, tw``]}/>
-                <View style={[styles.balanceContainer, tw`mb-16 items-center`]}>
-                   <View>
+                   <View style={tw`flex flex-row items-center`}>
+                       <View>
+                           <Image source={{uri: user.image}} style={[styles.image1, tw`rounded-full`]} />
+                       </View>
+                       <View style={tw`flex flex-1`}>
+                           <Text style={[styles.name, tw` text-white ml-5 text-lg font-bold`]}>{user.name}</Text>
+                           <Text style={[styles.name, tw` text-gray-200 ml-5 text-sm font-bold`]}>{user.email}</Text>
+                       </View>
+                       <View style={tw``}>
+                           <Text style={tw`text-xl text-green-500 font-bold`}>$ {user.netWorth}</Text>
+                       </View>
 
-                               <Image source={{uri: user.image}} style={[styles.image, tw`rounded-full`]} />
-                               <Text style={[styles.name, tw` text-white ml-5 text-xl font-bold`]}>{user.name}</Text>
-                               <Text style={[styles.name, tw` text-white ml-5 text-xl font-bold`]}>{user.email}</Text>
-
-                               <Text style={tw``}>{user.netWorth}</Text>
-
-                   </View>
                 </View>
             </>
 

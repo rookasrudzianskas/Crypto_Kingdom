@@ -13,6 +13,12 @@ const styles = StyleSheet.create({
         // resizeMode: 'contain',
         // display: 'flex',
     },
+    image1: {
+        height: 50,
+        aspectRatio: 1,
+        // resizeMode: 'contain',
+        // display: 'flex',
+    },
     balanceContainer: {
         width: "100%",
     },
