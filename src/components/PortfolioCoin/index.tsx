@@ -28,18 +28,18 @@ const PortfolioCoin = (props: PortfolioCoinProps) => {
     } = props;
 
     return (
-        <View style={[styles.root, tw`items-center`]}>
-            <View style={tw`ml-5`}>
+        <View style={[styles.root, tw`items-center bg-blue-700`]}>
+            <View style={tw`ml-5  bg-blue-700`}>
                 <Image source={{uri: image}} style={[styles.image, tw``]} />
             </View>
-                <View  style={tw`flex-1`}>
-                    <Text style={[styles.name, tw`ml-5 text-xl font-bold`]}>{name}</Text>
-                    <Text style={[styles.symbol, tw`ml-5  text-sm font-medium`]}>{symbol}</Text>
+                <View  style={tw`flex-1  bg-blue-700`}>
+                    <Text style={[styles.name, tw` text-white ml-5 text-xl font-bold`]}>{name}</Text>
+                    <Text style={[styles.symbol, tw`ml-5  text-white text-sm font-medium`]}>{symbol}</Text>
                 </View>
 
-                <View style={tw`flex flex-col items-center justify-center`}>
-                    <Text style={[styles.name, tw`mr-5 text-xl font-extrabold text-green-600`]}>${valueUSD}</Text>
-                    <Text style={[styles.symbol, tw`mt-2 mr-3 text-sm font-bold`]}>{symbol} {amount}</Text>
+                <View style={tw`flex flex-col  bg-blue-700 items-center justify-center`}>
+                    <Text style={[styles.name, tw`mr-5 text-xl  text-white font-extrabold text-green-600`]}>${valueUSD}</Text>
+                    <Text style={[styles.symbol, tw`mt-2 mr-3 text-sm  text-white font-bold`]}>{symbol} {amount}</Text>
                 </View>
 
         </View>
