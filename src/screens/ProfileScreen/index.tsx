@@ -17,7 +17,9 @@ const ProfileScreen = (props) => {
         netWorth: 79.993,
         email: 'rokas@byrookas.com',
         image: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg',
-    })
+    });
+
+
     return (
         <View style={[styles.root, tw`bg-blue-700`]}>
             <>
