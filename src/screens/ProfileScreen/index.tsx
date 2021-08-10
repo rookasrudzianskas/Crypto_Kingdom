@@ -14,7 +14,7 @@ const ProfileScreen = (props) => {
     const [user, setUser] = useState({
         id: '1',
         name: 'Rokas',
-        netWorth: 79.993,
+        netWorth: 79993,
         email: 'rokas@byrookas.com',
         image: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg',
     });
@@ -28,7 +28,7 @@ const ProfileScreen = (props) => {
                    <View>
                        <View style={[styles.container, tw`items-center bg-blue-700`]}>
                            <View style={tw`ml-5 flex flex-row bg-blue-700  items-center justify-center`}>
-                               <Image source={{uri: image}} style={[styles.image, tw`rounded-full`]} />
+                               <Image source={{uri: user.image}} style={[styles.image, tw`rounded-full`]} />
                            </View>
                            <View  style={tw`flex-1  bg-blue-700`}>
                                <Text style={[styles.name, tw` text-white ml-5 text-xl font-bold`]}>{user.name}</Text>
