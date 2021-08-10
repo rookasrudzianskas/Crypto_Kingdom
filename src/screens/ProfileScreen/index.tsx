@@ -24,7 +24,7 @@ const ProfileScreen = (props) => {
         <View style={[styles.root, tw`bg-blue-700`]}>
             <>
                 <Image  source={image} style={[styles.image, tw``]}/>
-                   <View style={tw`flex flex-row items-center`}>
+                   <View style={tw`flex flex-row items-center  mt-32`}>
                        <View>
                            <Image source={{uri: user.image}} style={[styles.image1, tw`rounded-full`]} />
                        </View>
