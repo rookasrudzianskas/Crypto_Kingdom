@@ -27,11 +27,13 @@ const HomeScreen = (props) => {
 
 
     {/*// @ts-ignore*/}
-                <TouchableOpacity onClick={goToPortfolioScreen} activeOpacity={0.8} >
-                    <View style={tw`px-16 py-5 bg-white flex items-center border-4 border-blue-500 rounded-xl  mt-10`}>
-                        <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Take me there!</Text>
-                    </View>
-                </TouchableOpacity>
+    {/*            <View style={tw`absolute bottom-0 left-0`}>*/}
+                    <TouchableOpacity onPress={goToPortfolioScreen} activeOpacity={0.8} >
+                        <View style={tw`px-16 py-5 bg-white flex items-center border-4 border-blue-500 rounded-xl  mt-10`}>
+                            <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Take me there!</Text>
+                        </View>
+                    </TouchableOpacity>
+                {/*</View>*/}
             </View>
 
 
