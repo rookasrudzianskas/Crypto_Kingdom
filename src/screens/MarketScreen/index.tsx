@@ -10,7 +10,7 @@ const portfolioCoins = [{
     id: '1',
     name: 'Virtual Dollars',
     symbol: 'USD',
-    amount: 79.993,
+    valueChange24H: 79.993,
     valueUSD: 79.993,
     image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
 }, {
@@ -18,20 +18,20 @@ const portfolioCoins = [{
     name: 'Bitcoin',
     symbol: 'BTC',
     image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
-    amount: 90.993,
+    valueChange24H: 90.993,
     valueUSD: 90.993,
 }, {
     id: '3',
     name: 'Eutherium',
     symbol: 'ETH',
-    amount: 100.993,
+    valueChange24H: 100.993,
     valueUSD: 100.993,
     image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
 }, {
     id: '4',
     name: 'Eutherium',
     symbol: 'ETH',
-    amount: 100.993,
+    valueChange24H: 100.993,
     valueUSD: 100.993,
     image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
 }];

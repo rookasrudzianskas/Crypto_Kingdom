@@ -29,7 +29,7 @@ const PortfolioCoin = (props: PortfolioCoinProps) => {
 
     return (
         <View style={[styles.root, tw`items-center bg-blue-700`]}>
-            <View style={tw`  bg-blue-700`}>
+            <View style={tw`ml-5  bg-blue-700`}>
                 <Image source={{uri: image}} style={[styles.image, tw``]} />
             </View>
                 <View  style={tw`flex-1  bg-blue-700`}>
