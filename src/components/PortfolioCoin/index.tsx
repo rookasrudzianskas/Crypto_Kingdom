@@ -9,7 +9,7 @@ export const PortfolioCoinProps = {
     symbol: String,
     amount: Number,
     valueUSD: Number,
-}
+};
 
 const PortfolioCoin = (props: PortfolioCoinProps) => {
 
