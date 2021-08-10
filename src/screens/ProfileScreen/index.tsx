@@ -19,6 +19,9 @@ const ProfileScreen = (props) => {
         image: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg',
     });
 
+    const signOut = () => {
+
+    }
 
     return (
         <View style={[styles.root, tw`bg-blue-700`]}>
@@ -41,7 +44,7 @@ const ProfileScreen = (props) => {
 
 
                 <View style={tw`absolute bottom-0 mx-auto mb-10`}>
-                       <TouchableOpacity activeOpacity={0.8} >
+                       <TouchableOpacity onPress={signOut} activeOpacity={0.8} >
                              <View style={tw`px-16 py-5 bg-white flex items-center border-4 border-blue-500 rounded-xl  mt-10`}>
                                   <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Sign Out!</Text>
                              </View>
