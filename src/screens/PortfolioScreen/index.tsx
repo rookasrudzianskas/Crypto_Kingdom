@@ -41,18 +41,21 @@ const portfolioCoins = [{
 const PortfolioScreen = (props) => {
     return (
         <View style={[styles.root, tw`bg-blue-700`]}>
-            <Image  source={image} style={styles.image}/>
-            <View style={[styles.balanceContainer, tw`mb-16`]}>
-                <View style={[tw`mt-12`]}>
-                           <Text style={tw`text-3xl text-gray-200 font-bold`}>Portfolio balance</Text>
-                           <View style={tw`mt-2`}>
-                               <Text style={tw`text-3xl text-white font-bold`}>$ <Text style={tw`text-4xl font-extrabold text-green-500 mt-5 text-center`}>64,423</Text></Text>
-                           </View>
-                       </View>
-                </View>
 
             {/*<View style={tw`bg-blu`}>*/}
-            <FlatList showsVerticalScrollIndicator={false} style={{width: '100%'}} data={portfolioCoins} renderItem={({item}) => <PortfolioCoin portfolioCoin={item}  />} />
+            <FlatList showsVerticalScrollIndicator={false} style={{width: '100%'}} data={portfolioCoins} renderItem={({item}) => <PortfolioCoin portfolioCoin={item}  />} ListHeaderComponentStyle={{alignItems: 'center'}} ListHeaderComponent={() => (
+                <>
+                    <Image  source={image} style={styles.image}/>
+                    <View style={[styles.balanceContainer, tw`mb-16`]}>
+                        <View style={[tw`mt-12`]}>
+                            <Text style={tw`text-3xl text-gray-200 font-bold`}>Portfolio balance</Text>
+                            <View style={tw`mt-2`}>
+                                <Text style={tw`text-3xl text-white font-bold`}>$ <Text style={tw`text-4xl font-extrabold text-green-500 mt-5 text-center`}>64,423</Text></Text>
+                            </View>
+                        </View>
+                    </View>
+                </>
+            )} />
             {/*</View>*/}
             </View>
     );
