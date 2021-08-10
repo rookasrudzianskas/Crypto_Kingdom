@@ -24,7 +24,7 @@ const portfolioCoins = [{
     symbol: 'ETH',
     amount: 100.993,
     valueUSD: 100.993,
-}]
+}];
 
 
 // @ts-ignore
