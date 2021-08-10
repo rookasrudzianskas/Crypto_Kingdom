@@ -28,21 +28,20 @@ const PortfolioCoin = (props: PortfolioCoinProps) => {
     } = props;
 
     return (
-        <View style={[styles.root, tw`bg-blue-700`]}>
-            <View style={tw`flex flex-row items-center w-full`}>
+        <View style={[styles.root, tw`items-center`]}>
+            <View style={tw`ml-5`}>
                 <Image source={{uri: image}} style={[styles.image, tw``]} />
-
-                <View>
-                    <Text style={styles.name}>{name}</Text>
-                    <Text style={styles.symbol}>{symbol}</Text>
-                </View>
-
-                <View>
-                    <Text style={styles.name}>${valueUSD}</Text>
-                    <Text style={styles.symbol}>{symbol}{amount}</Text>
-                </View>
-
             </View>
+                <View  style={tw`flex-1`}>
+                    <Text style={[styles.name, tw`ml-5 text-xl font-bold`]}>{name}</Text>
+                    <Text style={[styles.symbol, tw`ml-5  text-sm font-medium`]}>{symbol}</Text>
+                </View>
+
+                <View style={tw`flex flex-col items-center justify-center`}>
+                    <Text style={[styles.name, tw`mr-5 text-xl font-extrabold text-green-600`]}>${valueUSD}</Text>
+                    <Text style={[styles.symbol, tw`mt-2 mr-3 text-sm font-bold`]}>{symbol} {amount}</Text>
+                </View>
+
         </View>
     );
 };
