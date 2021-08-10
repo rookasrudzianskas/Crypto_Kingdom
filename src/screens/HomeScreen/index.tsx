@@ -18,7 +18,7 @@ const HomeScreen = (props) => {
 
     return (
         <View style={tw`items-center flex-1 bg-blue-700`}>
-            <View style={tw`p-24 flex items-center justify-center`}>
+            <View style={tw`p-16 flex items-center justify-center`}>
                 <Image source={image} style={styles.image} />
                 <Text style={tw` text-4xl font-bold mt-24 text-white text-center`}>Welcome to Crypto Kingdom</Text>
                 <View style={tw`flex items-center justify-center`}>
@@ -28,8 +28,8 @@ const HomeScreen = (props) => {
 
     {/*// @ts-ignore*/}
                 <TouchableOpacity onClick={goToPortfolioScreen} activeOpacity={0.8} >
-                    <View style={tw`px-16 py-5 bg-white  border-4 border-blue-500 rounded-xl  mt-10`}>
-                        <Text style={tw`text-gray-700 text-lg font-bold`}>Take me there!</Text>
+                    <View style={tw`px-16 py-5 bg-white flex items-center border-4 border-blue-500 rounded-xl  mt-10`}>
+                        <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Take me there!</Text>
                     </View>
                 </TouchableOpacity>
             </View>
