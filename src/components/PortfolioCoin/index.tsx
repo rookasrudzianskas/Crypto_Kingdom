@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from "../Themed";
+import {View, Text} from "../Themed";
 import tw from "tailwind-react-native-classnames";
 import styles from "./style";
 
@@ -22,12 +22,12 @@ const PortfolioCoin = (props: PortfolioCoinProps) => {
             symbol,
             amount,
             valueUSD,
-        }
+        },
     } = props;
 
     return (
-        <View style={[styles.root, tw``]}>
-
+        <View style={[styles.root, tw`bg-blue-700`]}>
+            <Text>Rokas</Text>
         </View>
     );
 };

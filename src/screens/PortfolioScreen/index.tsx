@@ -12,10 +12,12 @@ const portfolioCoins = [{
     symbol: 'USD',
     amount: 79.993,
     valueUSD: 79.993,
+    image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
 }, {
     id: '2',
     name: 'Bitcoin',
     symbol: 'BTC',
+    image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
     amount: 90.993,
     valueUSD: 90.993,
 }, {
@@ -24,6 +26,7 @@ const portfolioCoins = [{
     symbol: 'ETH',
     amount: 100.993,
     valueUSD: 100.993,
+    image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
 }];
 
 
@@ -41,7 +44,7 @@ const PortfolioScreen = (props) => {
                        </View>
                 </View>
 
-            <FlatList data={portfolioCoins} renderItem={({item}) => <PortfolioCoin image={} name={} symbol={} />} />
+            <FlatList data={portfolioCoins} renderItem={({item}) => <PortfolioCoin portfolioCoin={item}  />} />
             </View>
     );
 };
