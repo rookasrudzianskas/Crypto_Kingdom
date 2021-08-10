@@ -27,7 +27,7 @@ export default function BottomTabNavigator() {
             name="Home"
             component={HomeScreen}
             options={{
-              tabBarIcon: ({ color }) => <Entypo name="home" size={30} color={color} />,
+              tabBarIcon: ({ color }) => <Entypo name="home" size={24} color={color} />,
             }}
 
           />
@@ -36,7 +36,7 @@ export default function BottomTabNavigator() {
             name="Portfolio"
             component={PortfolioScreen}
             options={{
-              tabBarIcon: ({ color }) => <AntDesign name="piechart" size={30} color={color} />,
+              tabBarIcon: ({ color }) => <AntDesign name="piechart" size={24} color={color} />,
             }}
           />
 
@@ -44,7 +44,7 @@ export default function BottomTabNavigator() {
             name="Market"
             component={MarketScreen}
             options={{
-                tabBarIcon: ({ color }) => <FontAwesome5 name="chart-line" size={30} color={color} />,
+                tabBarIcon: ({ color }) => <FontAwesome5 name="chart-line" size={24} color={color} />,
             }}
         />
 
@@ -52,7 +52,7 @@ export default function BottomTabNavigator() {
             name="Rankings"
             component={RankingsScreen}
             options={{
-                tabBarIcon: ({ color }) => <MaterialIcons name="leaderboard" size={30} color={color} />,
+                tabBarIcon: ({ color }) => <MaterialIcons name="leaderboard" size={24} color={color} />,
             }}
         />
 
@@ -60,7 +60,7 @@ export default function BottomTabNavigator() {
             name="Profile"
             component={ProfileScreen}
             options={{
-                tabBarIcon: ({ color }) => <FontAwesome name="user" size={30} color={color} />,
+                tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={color} />,
             }}
         />
     </BottomTab.Navigator>

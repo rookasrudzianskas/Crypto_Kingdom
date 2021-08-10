@@ -10,6 +10,12 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
     },
+    name: {
+
+    },
+    symbol: {
+
+    },
 });
 
 export default styles;
