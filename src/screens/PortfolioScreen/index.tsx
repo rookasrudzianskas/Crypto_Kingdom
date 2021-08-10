@@ -41,7 +41,7 @@ const PortfolioScreen = (props) => {
                        </View>
                 </View>
 
-            <FlatList data={portfolioCoins} renderItem={({item}) => <PortfolioCoin />} />
+            <FlatList data={portfolioCoins} renderItem={({item}) => <PortfolioCoin image={} name={} symbol={} />} />
             </View>
     );
 };

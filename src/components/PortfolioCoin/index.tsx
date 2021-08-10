@@ -4,21 +4,25 @@ import tw from "tailwind-react-native-classnames";
 import styles from "./style";
 
 export const PortfolioCoinProps = {
-    image: String,
-    name: String,
-    symbol: String,
-    amount: Number,
-    valueUSD: Number,
+    portfolioCoin: {
+        image: String,
+        name: String,
+        symbol: String,
+        amount: Number,
+        valueUSD: Number,
+    }
 };
 
 const PortfolioCoin = (props: PortfolioCoinProps) => {
 
     const {
-        image,
-        name,
-        symbol,
-        amount,
-        valueUSD,
+        portfolioCoin: {
+            image,
+            name,
+            symbol,
+            amount,
+            valueUSD,
+        }
     } = props;
 
     return (
