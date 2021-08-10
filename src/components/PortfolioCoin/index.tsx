@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text} from "../Themed";
 import tw from "tailwind-react-native-classnames";
 import styles from "./style";
+import {Image} from "react-native";
 
 export const PortfolioCoinProps = {
     portfolioCoin: {
@@ -13,6 +14,7 @@ export const PortfolioCoinProps = {
     }
 };
 
+// @ts-ignore
 const PortfolioCoin = (props: PortfolioCoinProps) => {
 
     const {
@@ -27,7 +29,10 @@ const PortfolioCoin = (props: PortfolioCoinProps) => {
 
     return (
         <View style={[styles.root, tw`bg-blue-700`]}>
-            <Text>Rokas</Text>
+            <View>
+                <Image source={{uri: image}} style={[styles.image, tw``]} />
+
+            </View>
         </View>
     );
 };
