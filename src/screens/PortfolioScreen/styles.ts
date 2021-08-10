@@ -22,6 +22,10 @@ const styles = StyleSheet.create({
     balanceContainer: {
         width: "100%",
     },
+    name: {
+
+    },
+
 });
 
 export default styles;

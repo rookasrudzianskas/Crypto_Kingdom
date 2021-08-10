@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image, FlatList} from "react-native";
+import {View, Text, Image, FlatList, TouchableOpacity} from "react-native";
 import tw from "tailwind-react-native-classnames";
 // @ts-ignore
 import image from '../../../assets/images/Saly-16.png';
@@ -24,7 +24,8 @@ const ProfileScreen = (props) => {
         <View style={[styles.root, tw`bg-blue-700`]}>
             <>
                 <Image  source={image} style={[styles.image, tw``]}/>
-                   <View style={tw`flex flex-row items-center  mt-32`}>
+
+                   <View style={tw`flex flex-row items-center  mt-32 `}>
                        <View>
                            <Image source={{uri: user.image}} style={[styles.image1, tw`rounded-full`]} />
                        </View>
@@ -36,6 +37,15 @@ const ProfileScreen = (props) => {
                            <Text style={tw`text-xl text-green-500 font-bold`}>$ {user.netWorth}</Text>
                        </View>
 
+                </View>
+
+
+                <View style={tw`absolute bottom-0 mx-auto mb-10`}>
+                       <TouchableOpacity activeOpacity={0.8} >
+                             <View style={tw`px-16 py-5 bg-white flex items-center border-4 border-blue-500 rounded-xl  mt-10`}>
+                                  <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Sign Out!</Text>
+                             </View>
+                       </TouchableOpacity>
                 </View>
             </>
 
