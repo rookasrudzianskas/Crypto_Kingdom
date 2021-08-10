@@ -37,7 +37,7 @@ const UserRankingItem = (props: UserRankingItemProps) => {
                 </View>
 
                 <View style={tw`flex flex-col  bg-blue-700 items-center justify-center`}>
-                    <Text style={[styles.name, tw`mr-5 text-xl  text-white font-extrabold text-green-600`]}>${netWorth}</Text>
+                    <Text style={[styles.name, tw`mr-5 text-xl  text-white font-extrabold text-white`]}>${netWorth}</Text>
                     {/*<Text style={[{color: valueChange24H > 0 ? '#4ddb00' : '#f10000'}, tw`font-bold`]}>*/}
                     {/*    {valueChange24H > 0 && '+'} {valueChange24H}*/}
                     {/*</Text>*/}
