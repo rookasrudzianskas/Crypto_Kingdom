@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Text, Image} from "react-native";
+import {View, Text, Image, FlatList} from "react-native";
 import tw from "tailwind-react-native-classnames";
 // @ts-ignore
 import image from '../../../assets/images/Saly-10.png';
 import styles from "./styles";
+import PortfolioCoin from "../../components/PortfolioCoin";
 
 const portfolioCoins = [{
     id: '1',
@@ -39,6 +40,8 @@ const PortfolioScreen = (props) => {
                            </View>
                        </View>
                 </View>
+
+            <FlatList data={portfolioCoins} renderItem={({item}) => <PortfolioCoin />} />
             </View>
     );
 };
