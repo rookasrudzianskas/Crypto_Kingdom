@@ -5,6 +5,26 @@ import tw from "tailwind-react-native-classnames";
 import image from '../../../assets/images/Saly-10.png';
 import styles from "./styles";
 
+const portfolioCoins = [{
+    id: '1',
+    name: 'Virtual Dollars',
+    symbol: 'USD',
+    amount: 79.993,
+    valueUSD: 79.993,
+}, {
+    id: '2',
+    name: 'Bitcoin',
+    symbol: 'BTC',
+    amount: 90.993,
+    valueUSD: 90.993,
+}, {
+    id: '3',
+    name: 'Eutherium',
+    symbol: 'ETH',
+    amount: 100.993,
+    valueUSD: 100.993,
+}]
+
 
 // @ts-ignore
 const PortfolioScreen = (props) => {
