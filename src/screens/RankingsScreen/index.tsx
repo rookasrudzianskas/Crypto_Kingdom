@@ -6,35 +6,32 @@ import image from '../../../assets/images/Saly-20.png';
 import styles from "./styles";
 import PortfolioCoin from "../../components/PortfolioCoin";
 import MarketCoin from "../../components/MarketCoin";
+import UserRankingItem from "../../components/UserRankingItem";
 
-const marketCoins = [{
+const user = [{
     id: '1',
-    name: 'Virtual Dollars',
+    name: 'Rokas',
     symbol: 'USD',
-    valueChange24H: 79.993,
-    valueUSD: 79.993,
-    image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
+    netWorth: 79.993,
+    image: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg',
 }, {
     id: '2',
-    name: 'Bitcoin',
+    name: 'Tom',
     symbol: 'BTC',
-    image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
-    valueChange24H: -90.993,
-    valueUSD: 90.993,
+    image: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg',
+    netWorth: 90.993,
 }, {
     id: '3',
-    name: 'Eutherium',
+    name: 'James',
     symbol: 'ETH',
-    valueChange24H: 100.993,
-    valueUSD: 100.993,
-    image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
+    netWorth: 100.993,
+    image: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg',
 }, {
     id: '4',
-    name: 'Eutherium',
+    name: 'Tim',
     symbol: 'ETH',
-    valueChange24H: -100.993,
-    valueUSD: 100.993,
-    image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
+    netWorth: 100.993,
+    image: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg',
 }];
 
 
@@ -49,7 +46,7 @@ const RankingsScreen = (props) => {
                 </View>
             </>
             {/*<View style={tw`bg-blu`}>*/}
-            <FlatList showsVerticalScrollIndicator={false} style={{width: '100%'}} data={marketCoins} renderItem={({item}) => <MarketCoin portfolioCoin={item}  />}/>
+            <FlatList showsVerticalScrollIndicator={false} style={{width: '100%'}} data={user} renderItem={({item, index}) => <UserRankingItem user={item} place={index + 1} />}/>
             {/*</View>*/}
         </View>
     );
