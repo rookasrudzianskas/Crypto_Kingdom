@@ -27,6 +27,13 @@ const portfolioCoins = [{
     amount: 100.993,
     valueUSD: 100.993,
     image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
+}, {
+    id: '4',
+    name: 'Eutherium',
+    symbol: 'ETH',
+    amount: 100.993,
+    valueUSD: 100.993,
+    image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
 }];
 
 
@@ -45,7 +52,7 @@ const PortfolioScreen = (props) => {
                 </View>
 
             {/*<View style={tw`bg-blu`}>*/}
-            <FlatList style={{width: '100%'}} data={portfolioCoins} renderItem={({item}) => <PortfolioCoin portfolioCoin={item}  />} />
+            <FlatList showsVerticalScrollIndicator={false} style={{width: '100%'}} data={portfolioCoins} renderItem={({item}) => <PortfolioCoin portfolioCoin={item}  />} />
             {/*</View>*/}
             </View>
     );
