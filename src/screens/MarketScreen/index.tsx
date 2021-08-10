@@ -5,6 +5,7 @@ import tw from "tailwind-react-native-classnames";
 import image from '../../../assets/images/Saly-17.png';
 import styles from "./styles";
 import PortfolioCoin from "../../components/PortfolioCoin";
+import MarketCoin from "../../components/MarketCoin";
 
 const marketCoins = [{
     id: '1',
@@ -18,7 +19,7 @@ const marketCoins = [{
     name: 'Bitcoin',
     symbol: 'BTC',
     image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
-    valueChange24H: 90.993,
+    valueChange24H: -90.993,
     valueUSD: 90.993,
 }, {
     id: '3',
@@ -31,7 +32,7 @@ const marketCoins = [{
     id: '4',
     name: 'Eutherium',
     symbol: 'ETH',
-    valueChange24H: 100.993,
+    valueChange24H: -100.993,
     valueUSD: 100.993,
     image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
 }];
@@ -48,7 +49,7 @@ const MarketScreen = (props) => {
                 </View>
             </>
             {/*<View style={tw`bg-blu`}>*/}
-            <FlatList showsVerticalScrollIndicator={false} style={{width: '100%'}} data={marketCoins} renderItem={({item}) => <PortfolioCoin portfolioCoin={item}  />}/>
+            <FlatList showsVerticalScrollIndicator={false} style={{width: '100%'}} data={marketCoins} renderItem={({item}) => <MarketCoin portfolioCoin={item}  />}/>
             {/*</View>*/}
         </View>
     );
