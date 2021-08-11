@@ -21,6 +21,14 @@ const CoinExchangeScreen = () => {
                 {isBuy ? "Buy" : "Sell"}
                 {coinData?.name}
             </Text>
+
+            <View style={tw``}>
+                <Text style={tw``}>
+                    1 {coinData?.symbol}
+                    {" = "}
+                    ${coinData?.currentPrice}
+                </Text>
+            </View>
         </View>
     );
 };

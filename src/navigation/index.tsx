@@ -27,9 +27,9 @@ const Stack = createStackNavigator<RootStackParamList>();
 function RootNavigator() {
     return (
     <Stack.Navigator screenOptions={{ headerShown: false,  }}>
-      <Stack.Screen name="CoinExchange" component={CoinExchangeScreen} options={{ title: 'Oops!' }} />
       <Stack.Screen name="Root" component={BottomTabNavigator} />
       <Stack.Screen options={{headerShown: false, title: "Price Data"}} name="CoinDetails" component={CoinDetailsScreen} />
+      <Stack.Screen name="CoinExchange" component={CoinExchangeScreen} options={{ title: 'Oops!' }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
