@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, Image, TouchableOpacity} from "react-native";
 import tw from 'tailwind-react-native-classnames';
 import styles from "./styles";
@@ -18,11 +18,31 @@ const WelcomeScreen = (props) => {
         navigation.navigate('Portfolio');
     }
 
+
+    useEffect(() => {
+
+        const fetchUser = async () => {
+            try {
+                const user = await Auth.currentAuthenticatedUser();
+
+                if (user) {
+                    navigation.navigate('Root');
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        }
+
+      fetchUser();
+
+    }, []);
+
     const signInWithGoogle = async () => {
         console.log("Google");
         // @ts-ignore
         // works but there are errors
         await Auth.federatedSignIn({ provider: "Google" });
+        console.log("DONE");
     }
 
     const signInWithApple = () => {
