@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image} from "react-native";
+import {View, Text, Image, TextInput} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
 // @ts-ignore
@@ -22,7 +22,7 @@ const CoinExchangeScreen = () => {
 
     return (
         <View style={tw`bg-blue-700 flex-1 items-center`}>
-            <Text style={tw` mt-10 text-white text-3xl font-medium`}>
+            <Text style={ [tw` mt-10 text-white text-3xl font-medium`]}>
                 {isBuy ? "Buy " : " Sell "}
                 {coinData?.name}
             </Text>
@@ -36,8 +36,28 @@ const CoinExchangeScreen = () => {
             </View>
 
             <View style={tw`mt-10`}>
-                <Image style={styles.image} source={image} />
+    {/*// @ts-ignore*/}
+                <Image style={styles.image [tw``]} source={image} />
             </View>
+
+            <View style={tw`flex flex-row`}>
+
+                <View style={tw``}>
+                    <TextInput placeholder={"0"} />
+                    <Text>{coinData?.symbol}</Text>
+                </View>
+
+                <View style={tw``}>
+                    <Text style={tw``}>=</Text>
+                </View>
+
+                <View style={tw``}>
+                    <TextInput placeholder={"0"} />
+                    <Text>{coinData?.symbol}</Text>
+                </View>
+
+            </View>
+
         </View>
     );
 };
