@@ -71,7 +71,7 @@ const CoinDetailsScreen = () => {
                 </View>
             </View>
 
-            <View style={tw`flex flex-row mt-10 mx-10`}>
+            <View style={tw`flex flex-row mt-10 mx-8`}>
                 <View style={tw`flex flex-1`}>
                     <Text  style={tw`text-lg text-white font-bold`}>Position</Text>
                 </View>
