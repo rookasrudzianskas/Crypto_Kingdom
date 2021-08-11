@@ -13,7 +13,7 @@ const HomeScreen = (props) => {
     const navigation = useNavigation();
 
     const goToPortfolioScreen = () => {
-        // navigation.push('Portfolio');
+        navigation.navigate('CoinDetails');
     }
 
     return (

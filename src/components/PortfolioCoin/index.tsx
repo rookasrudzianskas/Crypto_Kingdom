@@ -2,7 +2,8 @@ import React from 'react';
 import {View, Text} from "../Themed";
 import tw from "tailwind-react-native-classnames";
 import styles from "./style";
-import {Image} from "react-native";
+import {Image, Pressable} from "react-native";
+import {useNavigation} from "@react-navigation/native";
 
 export const PortfolioCoinProps = {
     portfolioCoin: {
@@ -17,6 +18,8 @@ export const PortfolioCoinProps = {
 // @ts-ignore
 const PortfolioCoin = (props: PortfolioCoinProps) => {
 
+    const navigation = useNavigation();
+
     const {
         portfolioCoin: {
             image,
@@ -28,7 +31,7 @@ const PortfolioCoin = (props: PortfolioCoinProps) => {
     } = props;
 
     return (
-        <View style={[styles.root, tw`items-center bg-blue-700`]}>
+        <Pressable onPress={() => navigation.navigate('CoinDetails')} style={[styles.root, tw`items-center bg-blue-700`]}>
             <View style={tw`ml-5  bg-blue-700`}>
                 <Image source={{uri: image}} style={[styles.image, tw``]} />
             </View>
@@ -42,7 +45,7 @@ const PortfolioCoin = (props: PortfolioCoinProps) => {
                     <Text style={[styles.symbol, tw`mt-2 mr-3 text-sm  text-white font-bold`]}>{symbol} {amount}</Text>
                 </View>
 
-        </View>
+        </Pressable>
     );
 };
 
