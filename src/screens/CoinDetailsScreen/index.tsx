@@ -19,7 +19,25 @@ const CoinDetailsScreen = () => {
         currentPrice: 3423432,
         amount: 2,
 
-    })
+    });
+
+    const [liked, setLiked] = useState(false);
+    const [icon, setIcon] = useState('staro');
+
+    const liking = () => {
+
+        if(liked) {
+            setLiked(false);
+        } else {
+            setLiked(true);
+        }
+        if(liked) {
+            setIcon('star');
+        } else {
+            setIcon('staro');
+        }
+    };
+
     return (
         <View style={tw`bg-blue-700 flex-1`}>
                 <View style={tw`flex items-center mt-14 mb-10`}>
@@ -35,8 +53,8 @@ const CoinDetailsScreen = () => {
                 </View>
 
                 <View style={tw`flex flex-col  bg-blue-700 items-center justify-center`}>
-                    <TouchableOpacity style={tw`mr-5`} activeOpacity={0.8}>
-                        <AntDesign name={'staro'} size={30} color={"#eac928"} />
+                    <TouchableOpacity onPress={liking} style={tw`mr-5`} activeOpacity={0.8}>
+                        <AntDesign name={icon} size={30} color={"#eac928"} />
                     </TouchableOpacity>
                 </View>
 
