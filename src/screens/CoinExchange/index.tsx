@@ -65,7 +65,7 @@ const CoinExchangeScreen = () => {
     return (
         <View style={tw`bg-blue-700 flex-1`}>
             <View style={tw`items-center`}>
-                <Text style={ [tw` mt-10 text-white text-3xl font-medium`]}>
+                <Text style={ [tw` mt-16 text-white text-3xl font-medium`]}>
                     {isBuy ? "Buy " : " Sell "}
                     {coinData?.name}
                 </Text>
