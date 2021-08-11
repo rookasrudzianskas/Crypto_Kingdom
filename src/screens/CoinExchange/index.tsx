@@ -23,6 +23,7 @@ const CoinExchangeScreen = () => {
     const [coinUSDValue, setCoinUSDValue] = useState(0);
 
 
+    // @ts-ignore
     return (
         <View style={tw`bg-blue-700 flex-1`}>
             <View style={tw`items-center`}>
@@ -49,7 +50,8 @@ const CoinExchangeScreen = () => {
             <View style={[styles.root, tw`mt-16 mx-10 items-center`]}>
 
                 <View style={tw`flex items-center bg-blue-400 p-5 rounded-lg`}>
-                    <TextInput value={coinAmount} onTextChange={() => setCoinAmount(text)} style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
+        {/*// @ts-ignore*/}
+                    <TextInput keyboardType="decimal-pad" value={coinAmount} onTextChange={() => setCoinAmount(text)} style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
                     <Text style={tw`text-white text-xl font-bold mt-3`}>{coinData?.symbol}</Text>
                 </View>
 
@@ -58,7 +60,8 @@ const CoinExchangeScreen = () => {
                 </View>
 
                 <View style={tw` flex items-center bg-blue-400 p-5 rounded-lg`}>
-                    <TextInput value={coinUSDValue} onTextChange={() => setUSDCoinValue(text)}  style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
+        {/*// @ts-ignore*/}
+                    <TextInput keyboardType="decimal-pad" value={coinUSDValue} onTextChange={() => setUSDCoinValue(text)}  style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
                     <Text style={tw`text-white text-xl font-bold mt-3`}>{coinData?.symbol}</Text>
                 </View>
 
