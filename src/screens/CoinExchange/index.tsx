@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, Image, TextInput} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
@@ -19,41 +19,47 @@ const CoinExchangeScreen = () => {
     // @ts-ignore
     const coinData = route?.params?.coinData;
 
+    const [coinAmount, setCoinAmount] = useState(0);
+    const [coinUSDValue, setCoinUSDValue] = useState(0);
+
 
     return (
-        <View style={tw`bg-blue-700 flex-1 items-center`}>
-            <Text style={ [tw` mt-10 text-white text-3xl font-medium`]}>
-                {isBuy ? "Buy " : " Sell "}
-                {coinData?.name}
-            </Text>
-
-            <View style={tw``}>
-                <Text style={tw`text-white text-xl font-medium mt-5`}>
-                    1 {coinData?.symbol}
-                    {" = "}
-                    ${coinData?.currentPrice}
+        <View style={tw`bg-blue-700 flex-1`}>
+            <View style={tw`items-center`}>
+                <Text style={ [tw` mt-10 text-white text-3xl font-medium`]}>
+                    {isBuy ? "Buy " : " Sell "}
+                    {coinData?.name}
                 </Text>
-            </View>
-
-            <View style={tw`mt-10`}>
-    {/*// @ts-ignore*/}
-                <Image style={styles.image [tw``]} source={image} />
-            </View>
-
-            <View style={tw`flex flex-row`}>
 
                 <View style={tw``}>
-                    <TextInput placeholder={"0"} />
-                    <Text>{coinData?.symbol}</Text>
+                    <Text style={tw`text-white text-xl font-medium mt-5`}>
+                        1 {coinData?.symbol}
+                        {" = "}
+                        ${coinData?.currentPrice}
+                    </Text>
+                </View>
+
+                <View style={tw`mt-10`}>
+        {/*// @ts-ignore*/}
+                    <Image style={styles.image [tw``]} source={image} />
+                </View>
+
+            </View>
+
+            <View style={[styles.root, tw`mt-16 mx-10 items-center`]}>
+
+                <View style={tw`flex items-center bg-blue-400 p-5 rounded-lg`}>
+                    <TextInput value={coinAmount} onTextChange={() => setCoinAmount(text)} style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
+                    <Text style={tw`text-white text-xl font-bold mt-3`}>{coinData?.symbol}</Text>
                 </View>
 
                 <View style={tw``}>
-                    <Text style={tw``}>=</Text>
+                    <Text style={tw`text-2xl text-white font-bold`}>=</Text>
                 </View>
 
-                <View style={tw``}>
-                    <TextInput placeholder={"0"} />
-                    <Text>{coinData?.symbol}</Text>
+                <View style={tw` flex items-center bg-blue-400 p-5 rounded-lg`}>
+                    <TextInput value={coinUSDValue} onTextChange={() => setUSDCoinValue(text)}  style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
+                    <Text style={tw`text-white text-xl font-bold mt-3`}>{coinData?.symbol}</Text>
                 </View>
 
             </View>
