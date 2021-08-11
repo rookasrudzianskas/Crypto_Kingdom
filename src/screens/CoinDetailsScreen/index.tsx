@@ -188,7 +188,7 @@ const CoinDetailsScreen = () => {
         valueChange1D: 3.342,
         valueChange7D: -3.423,
         valueUSD: 459342,
-        name: 'Bitcoin',
+        name: 'BTC',
         currentPrice: 3423432,
         amount: 2,
 
