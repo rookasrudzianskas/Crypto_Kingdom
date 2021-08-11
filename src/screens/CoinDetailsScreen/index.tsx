@@ -16,7 +16,7 @@ const CoinDetailsScreen = () => {
     })
     return (
         <View style={tw`bg-blue-700 flex-1`}>
-                <View style={tw`flex items-center py-10`}>
+                <View style={tw`flex items-center mt-14 mb-10`}>
                     <Text style={tw`text-2xl font-bold text-white`}>Price Data</Text>
                 </View>
             <View style={[styles.root, tw`items-center bg-blue-700`]}>
