@@ -4,6 +4,7 @@ import styles from "../../components/MarketCoin/style";
 import tw from "tailwind-react-native-classnames";
 import {AntDesign} from "@expo/vector-icons";
 import PercentageChange from "../../components/PercentageChange";
+import CoinPriceGraph from "../../components/CoinPriceGraph";
 
 const CoinDetailsScreen = () => {
 
@@ -61,7 +62,14 @@ const CoinDetailsScreen = () => {
 
             </View>
 
+            {/*chart goes in here*/}
 
+            <View style={tw``}>
+                <CoinPriceGraph />
+            </View>
+
+
+        {/*    chart ends in here*/}
 
 
         {/*    bottom side with differnces */}
