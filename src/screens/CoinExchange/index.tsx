@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Image, TextInput} from "react-native";
+import {View, Text, Image, TextInput, TouchableOpacity} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
 // @ts-ignore
@@ -21,6 +21,8 @@ const CoinExchangeScreen = () => {
 
     const [coinAmount, setCoinAmount] = useState('');
     const [coinUSDValue, setCoinUSDValue] = useState('');
+
+    const maxUSD = 100000;
 
 
     useEffect(() => {
@@ -53,6 +55,10 @@ const CoinExchangeScreen = () => {
 
 
     }, [coinUSDValue]);
+
+    const onPlaceOrder = () => {
+
+    };
 
 
     // @ts-ignore
@@ -91,13 +97,22 @@ const CoinExchangeScreen = () => {
                     <Text style={tw`text-2xl text-white font-bold`}>=</Text>
                 </View>
 
-                <View style={tw` flex items-center bg-blue-400 p-5 rounded-lg`}>
-        {/*// @ts-ignore*/}
-                    <TextInput keyboardType="decimal-pad" value={coinUSDValue} onChangeText={setCoinUSDValue}  style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
-                    <Text style={tw`text-white text-xl font-bold mt-3`}>{coinData?.symbol}</Text>
-                </View>
+                <View style={tw``}>
+                    <View style={tw` flex items-center bg-blue-400 p-5 rounded-lg`}>
+            {/*// @ts-ignore*/}
+                        <TextInput keyboardType="decimal-pad" value={coinUSDValue} onChangeText={setCoinUSDValue}  style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
+                        <Text style={tw`text-white text-xl font-bold mt-3`}>USD</Text>
+                    </View>
 
+                    {/*<Text>abc</Text>*/}
+                </View>
             </View>
+
+            <TouchableOpacity onPress={onPlaceOrder} activeOpacity={0.8} style={tw`absolute bottom-0 mx-auto`} >
+                <View style={tw`px-16 py-5 bg-green-500 flex items-center border-4 border-green-400 rounded-xl  mt-10`}>
+                    <Text style={tw` text-white text-center text-lg font-bold`}>Take me there!</Text>
+                </View>
+            </TouchableOpacity>
 
         </View>
     );
