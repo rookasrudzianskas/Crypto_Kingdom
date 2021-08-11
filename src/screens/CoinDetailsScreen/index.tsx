@@ -197,12 +197,12 @@ const CoinDetailsScreen = () => {
     const navigation = useNavigation();
 
     const onSell = () => {
-      navigation.navigate('CoinExchange');
+      navigation.navigate('CoinExchange', {isBuy: false, coinData});
 
     };
 
     const onBuy = () => {
-      navigation.navigate('CoinExchange');
+      navigation.navigate('CoinExchange', {isBuy: true, coinData});
     };
 
     const [liked, setLiked] = useState(false);

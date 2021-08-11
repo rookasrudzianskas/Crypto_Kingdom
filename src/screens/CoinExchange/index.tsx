@@ -19,7 +19,7 @@ const CoinExchangeScreen = () => {
         <View style={tw``}>
             <Text style={tw``}>
                 {isBuy ? "Buy" : "Sell"}
-                {coinData.name}
+                {coinData?.name}
             </Text>
         </View>
     );
