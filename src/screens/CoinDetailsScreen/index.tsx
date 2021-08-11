@@ -45,25 +45,27 @@ const CoinDetailsScreen = () => {
 
         {/*    bottom side with differnces */}
 
-            <View style={tw``}>
-                <View style={tw``}>
-                    <Text style={tw``}>Current Price</Text>
-                    <Text style={tw``}>{coinData.currentPrice}</Text>
+            <View style={tw`flex flex-row mx-8 mt-10`}>
+                <View style={tw`flex w-1/3`}>
+                    <Text style={tw`text-lg text-white`}>Current Price</Text>
+                    <Text style={tw`text-white text-xl font-bold`}>$ {coinData.currentPrice}</Text>
                 </View>
 
-                <View style={tw``}>
-                    <Text style={tw``}>1 Hour</Text>
-                    <PercentageChange value={coinData.valueChange24H} />
+                <View style={tw`w-1/3 flex flex-row justify-between`}>
+                <View style={tw`mx-8`}>
+                    <Text style={tw`text-lg text-white mb-3`}>1 Hour</Text>
+                    <PercentageChange style={{fontSize: 15}} value={coinData.valueChange24H} />
                 </View>
 
-                <View style={tw``}>
-                    <Text style={tw``}>1 Day</Text>
-                    <PercentageChange value={coinData.valueChange1D} />
+                <View style={tw`mx-2`}>
+                    <Text style={tw`text-lg text-white mb-3`}>1 Day</Text>
+                    <PercentageChange style={{fontSize: 15}} value={coinData.valueChange1D} />
                 </View>
 
-                <View style={tw``}>
-                    <Text style={tw``}>7 Days</Text>
-                    <PercentageChange value={coinData.valueChange7D} />
+                <View style={tw`mx-2`}>
+                    <Text style={tw`text-lg text-white mb-3`}>7 Days</Text>
+                    <PercentageChange style={{fontSize: 15}} value={coinData.valueChange7D} />
+                </View>
                 </View>
             </View>
         </View>
