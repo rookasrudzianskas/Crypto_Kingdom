@@ -228,7 +228,7 @@ const CoinDetailsScreen = () => {
                 <View style={tw`flex flex-col  bg-blue-700 items-center justify-center`}>
                     <TouchableOpacity onPress={liking} style={tw`mr-5`} activeOpacity={0.8}>
     {/*// @ts-ignore*/}
-                        <AntDesign name={icon} size={30} color={"#eac928"} />
+                        <AntDesign name={icon} size={30} color={"#fff"} />
                     </TouchableOpacity>
                 </View>
 

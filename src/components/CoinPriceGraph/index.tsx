@@ -25,7 +25,7 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
                 <Text>Bezier Line Chart</Text>
                 <LineChart
                     data={{
-                        labels: ["January", "February", "March", "April", "May", "June"],
+                        labels: ["-7 Days", "-6 Days", "-5 Days", "-4 Days", "-3 Days", "-2 Days", "-1 Day", "now"],
                         datasets: [
                             {
                                data,
