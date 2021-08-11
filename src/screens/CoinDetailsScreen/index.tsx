@@ -5,6 +5,7 @@ import tw from "tailwind-react-native-classnames";
 import {AntDesign} from "@expo/vector-icons";
 import PercentageChange from "../../components/PercentageChange";
 import CoinPriceGraph from "../../components/CoinPriceGraph";
+import {useNavigation} from "@react-navigation/native";
 
 const historyString = JSON.stringify([
     47222.9831719397,
@@ -193,6 +194,17 @@ const CoinDetailsScreen = () => {
 
     });
 
+    const navigation = useNavigation();
+
+    const onSell = () => {
+      navigation.navigate('CoinExchange');
+
+    };
+
+    const onBuy = () => {
+      navigation.navigate('CoinExchange');
+    };
+
     const [liked, setLiked] = useState(false);
     const [icon, setIcon] = useState('staro');
 
@@ -288,7 +300,7 @@ const CoinDetailsScreen = () => {
             <View style={tw`absolute bottom-0 mb-10`}>
             <View style={tw`flex flex-row mx-10 `}>
                 <View style={tw`w-1/2`}>
-                    <TouchableOpacity activeOpacity={0.8} >
+                    <TouchableOpacity activeOpacity={0.8} onPress={onBuy} >
                         <View style={tw`px-10 bg-green-500 py-5 mx-2 flex items-center border-4 border-green-400 rounded-xl  mt-10`}>
                             <Text style={tw`z-50 text-gray-100 text-center text-lg font-bold`}>Buy!</Text>
                         </View>
@@ -296,7 +308,7 @@ const CoinDetailsScreen = () => {
                 </View>
 
                 <View style={tw`w-1/2`}>
-                    <TouchableOpacity activeOpacity={0.8} >
+                    <TouchableOpacity activeOpacity={0.8} onPress={onSell} >
                         <View style={tw`px-10 py-5 mx-2 bg-red-500 flex items-center border-4 border-red-400 rounded-xl  mt-10`}>
                             <Text style={tw`text-gray-100 text-center text-lg font-bold`}>Sell!</Text>
                         </View>
