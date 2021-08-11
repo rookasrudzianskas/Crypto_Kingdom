@@ -16,7 +16,10 @@
         "cryptokingdomdf5b6cb2": {}
       },
       "function": {
-        "cryptokingdomdf5b6cb2PostConfirmation": {}
+        "cryptokingdomdf5b6cb2PostConfirmation": {
+          "deploymentBucketName": "amplify-cryptokingdom-dev-144358-deployment",
+          "s3Key": "amplify-builds/cryptokingdomdf5b6cb2PostConfirmation-336c743744585a38454f-build.zip"
+        }
       }
     }
   }
