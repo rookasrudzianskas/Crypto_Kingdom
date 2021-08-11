@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, Image} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
+// @ts-ignore
 import image from '../../../assets/images/Saly-31.png';
 import styles from "./styles";
 
@@ -13,8 +14,10 @@ const CoinExchangeScreen = () => {
 
      const route = useRoute();
 
-     const isBuy = route?.params?.isBuy;
-     const coinData = route?.params?.coinData;
+    // @ts-ignore
+    const isBuy = route?.params?.isBuy;
+    // @ts-ignore
+    const coinData = route?.params?.coinData;
 
 
     return (
