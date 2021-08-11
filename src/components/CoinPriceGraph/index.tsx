@@ -36,7 +36,7 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
                             }
                         ]
                     }}
-                    width={Dimensions.get("window").width} // from react-native
+                    width={Dimensions.get("window").width -30} // from react-native
                     height={220}
                     yAxisLabel="$"
                     yAxisSuffix="k"
@@ -57,7 +57,6 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
                             stroke: "#ffa726"
                         }
                     }}
-                    bezier
                     style={{
                         marginVertical: 8,
                         borderRadius: 16
