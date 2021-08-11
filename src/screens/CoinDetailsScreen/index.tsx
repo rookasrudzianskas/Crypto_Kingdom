@@ -17,6 +17,8 @@ const CoinDetailsScreen = () => {
         valueUSD: 459342,
         name: 'Bitcoin',
         currentPrice: 3423432,
+        amount: 2,
+
     })
     return (
         <View style={tw`bg-blue-700 flex-1`}>
@@ -66,6 +68,18 @@ const CoinDetailsScreen = () => {
                     <Text style={tw`text-lg text-white mb-3`}>7 Days</Text>
                     <PercentageChange style={{fontSize: 15}} value={coinData.valueChange7D} />
                 </View>
+                </View>
+            </View>
+
+            <View style={tw``}>
+                <View>
+                    <Text>Position</Text>
+                </View>
+
+                <View>
+                    <Text>
+                        {coinData.symbol} {coinData.amount} ($ {coinData.currentPrice * coinData.amount})
+                    </Text>
                 </View>
             </View>
         </View>
