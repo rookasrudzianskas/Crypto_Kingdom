@@ -106,7 +106,7 @@ const CoinDetailsScreen = () => {
             <View style={tw`flex flex-row mx-10`}>
                 <View style={tw`w-1/2`}>
                     <TouchableOpacity activeOpacity={0.8} >
-                        <View style={tw`px-16 py-5 bg-green-500 flex items-center border-4 border-green-400 rounded-xl  mt-10`}>
+                        <View style={tw`px-16 mx-5 py-5 bg-green-500 flex items-center border-4 border-green-400 rounded-xl  mt-10`}>
                             <Text style={tw`text-gray-100 text-center text-lg font-bold`}>Buy!</Text>
                         </View>
                     </TouchableOpacity>
@@ -114,7 +114,7 @@ const CoinDetailsScreen = () => {
 
                 <View style={tw`w-1/2`}>
                     <TouchableOpacity activeOpacity={0.8} >
-                        <View style={tw`px-16 py-5 bg-red-500 flex items-center border-4 border-red-400 rounded-xl  mt-10`}>
+                        <View style={tw`px-16 py-5 mx-5 bg-red-500 flex items-center border-4 border-red-400 rounded-xl  mt-10`}>
                             <Text style={tw`text-gray-100 text-center text-lg font-bold`}>Sell!</Text>
                         </View>
                     </TouchableOpacity>
