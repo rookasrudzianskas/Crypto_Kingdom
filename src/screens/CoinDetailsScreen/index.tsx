@@ -71,14 +71,14 @@ const CoinDetailsScreen = () => {
                 </View>
             </View>
 
-            <View style={tw``}>
-                <View>
-                    <Text>Position</Text>
+            <View style={tw`flex flex-row mt-10 mx-10`}>
+                <View style={tw`flex flex-1`}>
+                    <Text  style={tw`text-lg text-white font-bold`}>Position</Text>
                 </View>
 
-                <View>
-                    <Text>
-                        {coinData.symbol} {coinData.amount} ($ {coinData.currentPrice * coinData.amount})
+                <View  style={tw`flex `}>
+                    <Text  style={tw`text-lg text-white`}>
+                        <Text style={tw`font-bold`}>{coinData.symbol}</Text> <Text style={tw`text-green-500 font-bold`}>{coinData.amount}</Text> ($ {coinData.currentPrice * coinData.amount})
                     </Text>
                 </View>
             </View>
