@@ -16,6 +16,9 @@ interface CoinPriceGraphProps {
 
 const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
 
+
+    const data = JSON.parse(dataString);
+
     return (
         <View>
             <View style={{display: "flex", alignItems: "center", }}>
@@ -25,14 +28,7 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
                         labels: ["January", "February", "March", "April", "May", "June"],
                         datasets: [
                             {
-                                data: [
-                                    Math.random() * 100,
-                                    Math.random() * 100,
-                                    Math.random() * 100,
-                                    Math.random() * 100,
-                                    Math.random() * 100,
-                                    Math.random() * 100
-                                ]
+                               data,
                             }
                         ]
                     }}
@@ -54,8 +50,8 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
                             borderRadius: 16
                         },
                         propsForDots: {
-                            r: "3",
-                            strokeWidth: "2",
+                            r: "0",
+                            strokeWidth: "1",
                             stroke: "#fff"
                         }
                     }}
