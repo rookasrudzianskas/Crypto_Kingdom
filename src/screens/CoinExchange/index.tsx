@@ -26,17 +26,17 @@ const CoinExchangeScreen = () => {
     useEffect(() => {
         // this fires then coinAmount changes
 
-        const amount = parseFloat(coinAmount);
+        const amount = parseFloat(coinUSDValue);
         if(!amount && amount !== 0) {
             setCoinAmount("");
             setCoinUSDValue("");
             return;
         }
         // setCoinAmount(amount.toString());
-        setCoinUSDValue((amount * coinData?.currentPrice).toString());
+        setCoinAmount((amount / coinData?.currentPrice).toString());
 
 
-    }, [coinAmount]);
+    }, [coinUSDValue]);
 
 
     // @ts-ignore
