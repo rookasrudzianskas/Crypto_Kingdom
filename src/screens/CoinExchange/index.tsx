@@ -1,7 +1,9 @@
 import React from 'react';
-import {View, Text} from "react-native";
+import {View, Text, Image} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
+import image from '../../../assets/images/Saly-31.png';
+import styles from "./styles";
 
 interface CoinExchangeProps {
 
@@ -28,6 +30,10 @@ const CoinExchangeScreen = () => {
                     {" = "}
                     ${coinData?.currentPrice}
                 </Text>
+            </View>
+
+            <View>
+                <Image style={styles.image} source={image} />
             </View>
         </View>
     );
