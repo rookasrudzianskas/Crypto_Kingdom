@@ -64,3 +64,6 @@ const WelcomeScreen = (props) => {
 export default WelcomeScreen;
 
 // something
+
+
+/// from this step the amplify is in here
