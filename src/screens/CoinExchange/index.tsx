@@ -85,7 +85,7 @@ const CoinExchangeScreen = () => {
 
             </View>
 
-            <View style={[styles.root, tw`mt-16 mx-10 items-center`]}>
+            <View style={[styles.root, tw`mt-16 mx-10 items-center flex flex-1 -mt-32`]}>
 
                 <View style={tw`flex items-center bg-blue-400 p-5 rounded-lg`}>
         {/*// @ts-ignore*/}
@@ -108,9 +108,11 @@ const CoinExchangeScreen = () => {
                 </View>
             </View>
 
-            <TouchableOpacity onPress={onPlaceOrder} activeOpacity={0.8} style={tw`absolute bottom-0 mx-auto`} >
-                <View style={tw`px-16 py-5 bg-green-500 flex items-center border-4 border-green-400 rounded-xl  mt-10`}>
-                    <Text style={tw` text-white text-center text-lg font-bold`}>Take me there!</Text>
+            <TouchableOpacity onPress={onPlaceOrder} activeOpacity={0.8} style={tw`mb-10 mx-10`} >
+                <View style={tw``}>
+                    <View style={tw`px-16 py-5 bg-green-500 flex items-center border-4 border-green-400 rounded-xl  mt-10`}>
+                        <Text style={tw` text-white text-center text-lg font-bold`}>Buy!</Text>
+                </View>
                 </View>
             </TouchableOpacity>
 
