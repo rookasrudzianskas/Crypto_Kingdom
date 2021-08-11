@@ -7,11 +7,12 @@ interface CoinExchangeProps {
 
 }
 
-const CoinExchangeScreen = (props) => {
+const CoinExchangeScreen = () => {
 
      const route = useRoute();
 
-     const {isBuy, coinData} = route?.params;
+     const isBuy = route?.params?.isBuy;
+     const coinData = route?.params?.coinData;
 
 
     return (
