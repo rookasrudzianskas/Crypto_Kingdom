@@ -54,6 +54,7 @@ const CoinDetailsScreen = () => {
 
                 <View style={tw`flex flex-col  bg-blue-700 items-center justify-center`}>
                     <TouchableOpacity onPress={liking} style={tw`mr-5`} activeOpacity={0.8}>
+    {/*// @ts-ignore*/}
                         <AntDesign name={icon} size={30} color={"#eac928"} />
                     </TouchableOpacity>
                 </View>
@@ -99,6 +100,26 @@ const CoinDetailsScreen = () => {
                         <Text style={tw`font-bold`}>{coinData.symbol}</Text> <Text style={tw`text-green-500 font-bold`}>{coinData.amount}</Text> ($ {coinData.currentPrice * coinData.amount})
                     </Text>
                 </View>
+            </View>
+
+
+            <View style={tw`flex flex-row mx-10`}>
+                <View style={tw`w-1/2`}>
+                    <TouchableOpacity activeOpacity={0.8} >
+                        <View style={tw`px-16 py-5 bg-green-500 flex items-center border-4 border-green-400 rounded-xl  mt-10`}>
+                            <Text style={tw`text-gray-100 text-center text-lg font-bold`}>Buy!</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={tw`w-1/2`}>
+                    <TouchableOpacity activeOpacity={0.8} >
+                        <View style={tw`px-16 py-5 bg-red-500 flex items-center border-4 border-red-400 rounded-xl  mt-10`}>
+                            <Text style={tw`text-gray-100 text-center text-lg font-bold`}>Sell!</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+
             </View>
         </View>
     );
