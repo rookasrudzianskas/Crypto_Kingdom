@@ -26,7 +26,7 @@ const CoinExchangeScreen = () => {
     useEffect(() => {
         // this fires then coinAmount changes
 
-        const amount = parseFloat(coinUSDValue);
+        const amount = parseFloat(coinAmount);
         if(!amount && amount !== 0) {
             setCoinAmount("");
             setCoinUSDValue("");
