@@ -11,6 +11,8 @@ const CoinDetailsScreen = () => {
         image: 'https://bitcoin.org/img/icons/opengraph.png?1628351347',
         symbol: 'USD',
         valueChange24H: -1.12,
+        valueChange1D: 3.342,
+        valueChange7D: -3.423,
         valueUSD: 459342,
         name: 'Bitcoin',
         currentPrice: 3423432,
@@ -46,6 +48,21 @@ const CoinDetailsScreen = () => {
                 <View style={tw``}>
                     <Text style={tw``}>Current Price</Text>
                     <Text style={tw``}>{coinData.currentPrice}</Text>
+                </View>
+
+                <View style={tw``}>
+                    <Text style={tw``}>1 Hour</Text>
+                    <Text style={tw``}>{coinData.valueChange24H}</Text>
+                </View>
+
+                <View style={tw``}>
+                    <Text style={tw``}>1 Day</Text>
+                    <Text style={tw``}>{coinData.valueChange1D}</Text>
+                </View>
+
+                <View style={tw``}>
+                    <Text style={tw``}>7 Days</Text>
+                    <Text style={tw``}>{coinData.valueChange7D}</Text>
                 </View>
             </View>
         </View>
