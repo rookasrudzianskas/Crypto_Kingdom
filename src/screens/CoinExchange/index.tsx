@@ -39,6 +39,22 @@ const CoinExchangeScreen = () => {
     }, [coinAmount]);
 
 
+    useEffect(() => {
+        // this fires then coinAmount changes
+
+        const amount = parseFloat(coinUSDValue);
+        if(!amount && amount !== 0) {
+            setCoinAmount("");
+            setCoinUSDValue("");
+            return;
+        }
+        // setCoinAmount(amount.toString());
+        setCoinAmount((amount / coinData?.currentPrice).toString());
+
+
+    }, [coinUSDValue]);
+
+
     // @ts-ignore
     return (
         <View style={tw`bg-blue-700 flex-1`}>
