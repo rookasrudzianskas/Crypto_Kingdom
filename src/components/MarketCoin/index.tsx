@@ -3,6 +3,7 @@ import {View, Text} from "../Themed";
 import tw from "tailwind-react-native-classnames";
 import styles from "./style";
 import {Image} from "react-native";
+import PercentageChange from "../PercentageChange";
 
 export const PortfolioCoinProps = {
     portfolioCoin: {
@@ -39,9 +40,7 @@ const MarketCoin = (props: PortfolioCoinProps) => {
 
                 <View style={tw`flex flex-col  bg-blue-700 items-center justify-center`}>
                     <Text style={[styles.name, tw`mr-5 text-xl  text-white font-extrabold text-green-600`]}>${valueUSD}</Text>
-                    <Text style={[{color: valueChange24H > 0 ? '#4ddb00' : '#f10000'}, tw`font-bold`]}>
-                        {valueChange24H > 0 && '+'} {valueChange24H}
-                    </Text>
+                    <PercentageChange  value={valueChange24H}/>
                 </View>
 
         </View>
