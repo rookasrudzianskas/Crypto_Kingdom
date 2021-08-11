@@ -33,10 +33,10 @@ const CoinExchangeScreen = () => {
             return;
         }
         // setCoinAmount(amount.toString());
-        setCoinAmount((amount / coinData?.currentPrice).toString());
+        setCoinUSDValue((amount * coinData?.currentPrice).toString());
 
 
-    }, [coinUSDValue]);
+    }, [coinAmount]);
 
 
     // @ts-ignore
