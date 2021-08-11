@@ -12,7 +12,8 @@ const CoinDetailsScreen = () => {
         symbol: 'USD',
         valueChange24H: -1.12,
         valueUSD: 459342,
-        name: 'Bitcoin'
+        name: 'Bitcoin',
+        currentPrice: 3423432,
     })
     return (
         <View style={tw`bg-blue-700 flex-1`}>
@@ -34,6 +35,18 @@ const CoinDetailsScreen = () => {
                     </TouchableOpacity>
                 </View>
 
+            </View>
+
+
+
+
+        {/*    bottom side with differnces */}
+
+            <View style={tw``}>
+                <View style={tw``}>
+                    <Text style={tw``}>Current Price</Text>
+                    <Text style={tw``}>{coinData.currentPrice}</Text>
+                </View>
             </View>
         </View>
     );
