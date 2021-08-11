@@ -21,21 +21,21 @@ const CoinExchangeScreen = () => {
 
 
     return (
-        <View style={tw``}>
-            <Text style={tw``}>
-                {isBuy ? "Buy" : "Sell"}
+        <View style={tw`bg-blue-700 flex-1 items-center`}>
+            <Text style={tw` mt-10 text-white text-3xl font-medium`}>
+                {isBuy ? "Buy " : " Sell "}
                 {coinData?.name}
             </Text>
 
             <View style={tw``}>
-                <Text style={tw``}>
+                <Text style={tw`text-white text-xl font-medium mt-5`}>
                     1 {coinData?.symbol}
                     {" = "}
                     ${coinData?.currentPrice}
                 </Text>
             </View>
 
-            <View>
+            <View style={tw`mt-10`}>
                 <Image style={styles.image} source={image} />
             </View>
         </View>
