@@ -5,6 +5,7 @@ import styles from "./styles";
 // @ts-ignore
 import image from '../../../assets/images/Saly-1.png';
 import {useNavigation} from "@react-navigation/native";
+import {AntDesign} from "@expo/vector-icons";
 
 
 // @ts-ignore
@@ -20,19 +21,30 @@ const WelcomeScreen = (props) => {
         <View style={tw`items-center flex-1 bg-blue-700`}>
             <View style={tw`p-16 flex items-center justify-center`}>
                 <Image source={image} style={styles.image} />
-                <Text style={tw` text-4xl font-bold mt-24 text-white text-center`}>Welcome to Crypto Kingdom</Text>
-                <View style={tw`flex items-center justify-center`}>
-                    <Text style={tw` text-3xl font-bold mt-24 text-gray-200 text-center`}>Invest your virtual <Text style={tw`text-green-500 font-extrabold`}>$100,000</Text> and compete with others! 🔥</Text>
+                <Text style={tw` text-4xl font-bold mt-10 text-white text-center`}>Welcome to Crypto Kingdom</Text>
+                <View style={tw`flex items-center justify-center flex-1 -mt-32`}>
+                    <Text style={tw` text-3xl font-bold mt-24 text-gray-200 text-center`}>Proudly powered by <Text style={tw`text-green-500 font-extrabold`}>Rokas Rudzianskas</Text> and made with ❤️</Text>
                 </View>
 
 
     {/*// @ts-ignore*/}
     {/*            <View style={tw`absolute bottom-0 left-0`}>*/}
+                <View style={tw``}>
                     <TouchableOpacity onPress={goToPortfolioScreen} activeOpacity={0.8} >
-                        <View style={tw`px-16 py-5 bg-white flex items-center border-4 border-blue-500 rounded-xl  mt-10`}>
-                            <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Take me there!</Text>
+                        <View style={tw`px-16 py-5 bg-white flex flex-row items-center border-4 border-blue-500 rounded-xl  mt-2`}>
+                            <AntDesign style={tw`mr-5`} name="google" size={24} color="black" />
+                            <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Sign in with Google!</Text>
                         </View>
                     </TouchableOpacity>
+
+                <TouchableOpacity onPress={goToPortfolioScreen} activeOpacity={0.8} >
+                    <View style={tw`px-16 py-5 bg-white flex flex-row items-center border-4 border-blue-500 rounded-xl  mt-2`}>
+                        <AntDesign style={tw`mr-5`}  name="apple1" size={24} color="black" />
+                        <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Sign in with Apple!</Text>
+                    </View>
+                </TouchableOpacity>
+                </View>
+
                 {/*</View>*/}
             </View>
 
