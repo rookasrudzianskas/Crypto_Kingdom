@@ -18,9 +18,11 @@ const WelcomeScreen = (props) => {
         navigation.navigate('Portfolio');
     }
 
-    const signInWithGoogle = () => {
+    const signInWithGoogle = async () => {
         console.log("Google");
-        Auth.federatedSignIn();
+        // @ts-ignore
+        // works but there are errors
+        await Auth.federatedSignIn({ provider: "Google" });
     }
 
     const signInWithApple = () => {
