@@ -6,6 +6,7 @@ import styles from "./styles";
 import image from '../../../assets/images/Saly-1.png';
 import {useNavigation} from "@react-navigation/native";
 import {AntDesign} from "@expo/vector-icons";
+import { Auth } from 'aws-amplify';
 
 
 // @ts-ignore
@@ -19,6 +20,7 @@ const WelcomeScreen = (props) => {
 
     const signInWithGoogle = () => {
         console.log("Google");
+        Auth.federatedSignIn();
     }
 
     const signInWithApple = () => {
