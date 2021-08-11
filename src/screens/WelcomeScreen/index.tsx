@@ -17,6 +17,14 @@ const WelcomeScreen = (props) => {
         navigation.navigate('Portfolio');
     }
 
+    const signInWithGoogle = () => {
+        console.log("Google");
+    }
+
+    const signInWithApple = () => {
+        console.log("Apple");
+    }
+
     return (
         <View style={tw`items-center flex-1 bg-blue-700`}>
             <View style={tw`p-16 flex items-center justify-center`}>
@@ -30,14 +38,14 @@ const WelcomeScreen = (props) => {
     {/*// @ts-ignore*/}
     {/*            <View style={tw`absolute bottom-0 left-0`}>*/}
                 <View style={tw``}>
-                    <TouchableOpacity onPress={goToPortfolioScreen} activeOpacity={0.8} >
+                    <TouchableOpacity onPress={signInWithGoogle} activeOpacity={0.8} >
                         <View style={tw`px-16 py-5 bg-white flex flex-row items-center border-4 border-blue-500 rounded-xl  mt-2`}>
                             <AntDesign style={tw`mr-5`} name="google" size={24} color="black" />
                             <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Sign in with Google!</Text>
                         </View>
                     </TouchableOpacity>
 
-                <TouchableOpacity onPress={goToPortfolioScreen} activeOpacity={0.8} >
+                <TouchableOpacity onPress={signInWithApple} activeOpacity={0.8} >
                     <View style={tw`px-16 py-5 bg-white flex flex-row items-center border-4 border-blue-500 rounded-xl  mt-2`}>
                         <AntDesign style={tw`mr-5`}  name="apple1" size={24} color="black" />
                         <Text style={tw`text-gray-700 text-center text-lg font-bold`}>Sign in with Apple!</Text>
