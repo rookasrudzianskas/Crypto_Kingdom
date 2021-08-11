@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, Image, TextInput} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
@@ -21,6 +21,19 @@ const CoinExchangeScreen = () => {
 
     const [coinAmount, setCoinAmount] = useState('');
     const [coinUSDValue, setCoinUSDValue] = useState('');
+
+
+    useEffect(() => {
+        // this fires then coinAmount changes
+
+        const amount = parseFloat(coinAmount);
+        if(!amount) {
+            setCoinAmount("0");
+            return;
+        }
+
+
+    }, [coinAmount]);
 
 
     // @ts-ignore
