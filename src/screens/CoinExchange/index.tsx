@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Image, TextInput, TouchableOpacity, Alert, KeyboardAvoidingView} from "react-native";
+import {View, Text, Image, TextInput, TouchableOpacity, Alert, KeyboardAvoidingView, Platform} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
 // @ts-ignore
@@ -71,7 +71,9 @@ const CoinExchangeScreen = () => {
 
     // @ts-ignore
     return (
-        <KeyboardAvoidingView style={tw`bg-blue-700 flex-1`}>
+        <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? 'padding' : 'height'}
+            style={tw`bg-blue-700 flex-1`}>
             <View style={tw`items-center`}>
                 <Text style={ [tw` mt-16 text-white text-3xl font-medium`]}>
                     {isBuy ? "Buy " : " Sell "}
