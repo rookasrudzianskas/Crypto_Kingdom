@@ -44,7 +44,7 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
                         backgroundGradientFrom: "#2663EB",
                         backgroundGradientTo: "#1E40AF",
                         decimalPlaces: 2, // optional, defaults to 2dp
-                        color: (opacity = 1) => `rgba(255, 255, 255, ${0.1})`,
+                        color: (opacity = 1) => `rgba(255, 255, 255, ${0.5})`,
                         labelColor: (opacity = 1) => `rgba(255, 255, 255, ${1})`,
                         style: {
                             borderRadius: 16
