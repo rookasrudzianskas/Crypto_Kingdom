@@ -57,17 +57,16 @@ const CoinExchangeScreen = () => {
     }, [coinUSDValue]);
 
     const onPlaceOrder = () => {
-            // @ts-ignore
+         // @ts-ignore
         if(isBuy && coinUSDValue > maxUSD) {
             // @ts-ignore
-            Alert('Error', "Not enough USD coins.");
+            Alert('Error', `Not enough USD coins. Max: ${maxUSD}`);
             return;
         }
 
         if(!isBuy && coinAmount > coinData.amount) {
-            Alert('Error', "Not enough crypto currency coins.");
+            Alert('Error', `Not enough ${coinData?.symbol} currency coins. `);
             return;
-
         }
     };
 
