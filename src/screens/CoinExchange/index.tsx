@@ -65,6 +65,8 @@ const CoinExchangeScreen = () => {
         }
 
         if(!isBuy && coinAmount > coinData.amount) {
+            Alert('Error', "Not enough crypto currency coins.");
+            return;
 
         }
     };
