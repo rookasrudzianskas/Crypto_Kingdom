@@ -103,23 +103,25 @@ const CoinDetailsScreen = () => {
             </View>
 
 
-            <View style={tw`flex flex-row mx-10`}>
+            <View style={tw`absolute bottom-0 mb-10`}>
+            <View style={tw`flex flex-row mx-10 `}>
                 <View style={tw`w-1/2`}>
                     <TouchableOpacity activeOpacity={0.8} >
-                        <View style={tw`px-16 mx-5 py-5 bg-green-500 flex items-center border-4 border-green-400 rounded-xl  mt-10`}>
-                            <Text style={tw`text-gray-100 text-center text-lg font-bold`}>Buy!</Text>
+                        <View style={tw`px-10 bg-green-500 py-5 mx-2 flex items-center border-4 border-green-400 rounded-xl  mt-10`}>
+                            <Text style={tw`z-50 text-gray-100 text-center text-lg font-bold`}>Buy!</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
 
                 <View style={tw`w-1/2`}>
                     <TouchableOpacity activeOpacity={0.8} >
-                        <View style={tw`px-16 py-5 mx-5 bg-red-500 flex items-center border-4 border-red-400 rounded-xl  mt-10`}>
+                        <View style={tw`px-10 py-5 mx-2 bg-red-500 flex items-center border-4 border-red-400 rounded-xl  mt-10`}>
                             <Text style={tw`text-gray-100 text-center text-lg font-bold`}>Sell!</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
 
+            </View>
             </View>
         </View>
     );
