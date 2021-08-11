@@ -13,6 +13,7 @@ const CoinExchangeScreen = (props) => {
 
      const {isBuy, coinData} = route?.params;
 
+
     return (
         <View style={tw``}>
             <Text style={tw``}>
