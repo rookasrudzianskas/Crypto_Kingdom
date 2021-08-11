@@ -32,7 +32,7 @@ const CoinExchangeScreen = () => {
             setCoinUSDValue("");
             return;
         }
-        setCoinAmount(amount.toString());
+        // setCoinAmount(amount.toString());
         setCoinUSDValue((amount * coinData?.currentPrice).toString());
 
 
