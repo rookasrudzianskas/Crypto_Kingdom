@@ -1,5 +1,6 @@
-type Todo @model {
+type User @model {
   id: ID!
   name: String!
-  description: String
+  email: String!
+  image: String
 }
