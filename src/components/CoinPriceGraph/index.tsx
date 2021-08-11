@@ -18,7 +18,7 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
 
     return (
         <View>
-            <View style={{}}>
+            <View style={{display: "flex", alignItems: "center", }}>
                 <Text>Bezier Line Chart</Text>
                 <LineChart
                     data={{
@@ -40,21 +40,23 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
                     height={220}
                     yAxisLabel="$"
                     yAxisSuffix="k"
+                    withOuterLines={false}
+                    withInnerLines={false}
                     yAxisInterval={1} // optional, defaults to 1
                     chartConfig={{
                         backgroundColor: "#3B82F6",
                         backgroundGradientFrom: "#2663EB",
                         backgroundGradientTo: "#1E40AF",
                         decimalPlaces: 2, // optional, defaults to 2dp
-                        color: (opacity = 1) => `rgba(255, 255, 255, ${0.3})`,
+                        color: (opacity = 1) => `rgba(255, 255, 255, ${0.1})`,
                         labelColor: (opacity = 1) => `rgba(255, 255, 255, ${1})`,
                         style: {
                             borderRadius: 16
                         },
                         propsForDots: {
-                            r: "6",
+                            r: "3",
                             strokeWidth: "2",
-                            stroke: "#ffa726"
+                            stroke: "#fff"
                         }
                     }}
                     style={{
