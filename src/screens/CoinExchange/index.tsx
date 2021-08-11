@@ -27,11 +27,12 @@ const CoinExchangeScreen = () => {
         // this fires then coinAmount changes
 
         const amount = parseFloat(coinAmount);
-        if(!amount) {
-            setCoinAmount("0");
+        if(!amount && amount !== 0) {
+            setCoinAmount("");
+            setCoinUSDValue("");
             return;
         }
-
+        setCoinAmount(amount.toString());
         setCoinUSDValue((amount * coinData?.currentPrice).toString());
 
 
