@@ -19,8 +19,8 @@ const CoinExchangeScreen = () => {
     // @ts-ignore
     const coinData = route?.params?.coinData;
 
-    const [coinAmount, setCoinAmount] = useState(0);
-    const [coinUSDValue, setCoinUSDValue] = useState(0);
+    const [coinAmount, setCoinAmount] = useState('');
+    const [coinUSDValue, setCoinUSDValue] = useState('');
 
 
     // @ts-ignore
