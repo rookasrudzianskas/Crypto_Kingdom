@@ -3,6 +3,7 @@ import {View, Text, Image, TouchableOpacity} from "react-native";
 import styles from "../../components/MarketCoin/style";
 import tw from "tailwind-react-native-classnames";
 import {AntDesign} from "@expo/vector-icons";
+import PercentageChange from "../../components/PercentageChange";
 
 const CoinDetailsScreen = () => {
 
@@ -52,17 +53,17 @@ const CoinDetailsScreen = () => {
 
                 <View style={tw``}>
                     <Text style={tw``}>1 Hour</Text>
-                    <Text style={tw``}>{coinData.valueChange24H}</Text>
+                    <PercentageChange value={coinData.valueChange24H} />
                 </View>
 
                 <View style={tw``}>
                     <Text style={tw``}>1 Day</Text>
-                    <Text style={tw``}>{coinData.valueChange1D}</Text>
+                    <PercentageChange value={coinData.valueChange1D} />
                 </View>
 
                 <View style={tw``}>
                     <Text style={tw``}>7 Days</Text>
-                    <Text style={tw``}>{coinData.valueChange7D}</Text>
+                    <PercentageChange value={coinData.valueChange7D} />
                 </View>
             </View>
         </View>
