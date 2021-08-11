@@ -73,6 +73,7 @@ const CoinExchangeScreen = () => {
     return (
         <KeyboardAvoidingView
             behavior={Platform.OS === "ios" ? 'padding' : 'height'}
+            // keyboardVerticalOffset={100}
             style={tw`bg-blue-700 flex-1`}>
             <View style={tw`items-center`}>
                 <Text style={ [tw` mt-16 text-white text-3xl font-medium`]}>
