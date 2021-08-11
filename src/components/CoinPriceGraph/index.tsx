@@ -18,7 +18,7 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
 
     return (
         <View>
-            <View>
+            <View style={{}}>
                 <Text>Bezier Line Chart</Text>
                 <LineChart
                     data={{
