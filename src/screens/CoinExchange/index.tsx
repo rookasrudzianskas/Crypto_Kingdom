@@ -51,7 +51,7 @@ const CoinExchangeScreen = () => {
 
                 <View style={tw`flex items-center bg-blue-400 p-5 rounded-lg`}>
         {/*// @ts-ignore*/}
-                    <TextInput keyboardType="decimal-pad" value={coinAmount} onTextChange={() => setCoinAmount(text)} style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
+                    <TextInput keyboardType="decimal-pad" value={coinAmount} onChangeText={setCoinAmount} style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
                     <Text style={tw`text-white text-xl font-bold mt-3`}>{coinData?.name}</Text>
                 </View>
 
@@ -61,7 +61,7 @@ const CoinExchangeScreen = () => {
 
                 <View style={tw` flex items-center bg-blue-400 p-5 rounded-lg`}>
         {/*// @ts-ignore*/}
-                    <TextInput keyboardType="decimal-pad" value={coinUSDValue} onTextChange={() => setUSDCoinValue(text)}  style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
+                    <TextInput keyboardType="decimal-pad" value={coinUSDValue} onChangeText={setCoinUSDValue}  style={tw`bg-white px-6 py-3 font-bold text-gray-500 text-lg rounded-lg`} placeholder={"0"} />
                     <Text style={tw`text-white text-xl font-bold mt-3`}>{coinData?.symbol}</Text>
                 </View>
 
