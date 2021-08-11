@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Image, TextInput, TouchableOpacity} from "react-native";
+import {View, Text, Image, TextInput, TouchableOpacity, Alert} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
 // @ts-ignore
@@ -57,7 +57,16 @@ const CoinExchangeScreen = () => {
     }, [coinUSDValue]);
 
     const onPlaceOrder = () => {
+            // @ts-ignore
+        if(isBuy && coinUSDValue > maxUSD) {
+            // @ts-ignore
+            Alert('Error', "Not enough USD coins.");
+            return;
+        }
 
+        if(!isBuy && coinAmount > coinData.amount) {
+
+        }
     };
 
 
