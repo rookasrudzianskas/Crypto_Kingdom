@@ -42,12 +42,12 @@ const CoinPriceGraph = ({dataString}: CoinPriceGraphProps) => {
                     yAxisSuffix="k"
                     yAxisInterval={1} // optional, defaults to 1
                     chartConfig={{
-                        backgroundColor: "#e26a00",
-                        backgroundGradientFrom: "#fb8c00",
-                        backgroundGradientTo: "#ffa726",
+                        backgroundColor: "#3B82F6",
+                        backgroundGradientFrom: "#2663EB",
+                        backgroundGradientTo: "#1E40AF",
                         decimalPlaces: 2, // optional, defaults to 2dp
-                        color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-                        labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                        color: (opacity = 1) => `rgba(255, 255, 255, ${0.3})`,
+                        labelColor: (opacity = 1) => `rgba(255, 255, 255, ${1})`,
                         style: {
                             borderRadius: 16
                         },
