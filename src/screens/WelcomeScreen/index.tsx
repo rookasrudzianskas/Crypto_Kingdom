@@ -93,4 +93,5 @@ export default WelcomeScreen;
 /// from this step the amplify is in here
 
 // setting up the git
+// git setup is complete
 
